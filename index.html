@@ -1,294 +1,1046 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Lakshmikrishna & Abhiram</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
-<style>
-/* Layout: one tall scroll. A full-screen gate opens onto a hero, then centred sections separated by a gold diamond rule. Single look by choice: ivory paper, walnut ink, antique gold. */
-:root {
-  --paper: #f4ebdd;
-  --paper-deep: #ebdfcb;
-  --ink: #4a3426;
-  --ink-soft: #7a604d;
-  --gold: #a9792f;
-  --gold-line: #c9a46a;
-  --night: #2f2018;
-  --night-ink: #f4ebdd;
-  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
-  --body: "Jost", "Segoe UI", system-ui, sans-serif;
-  color-scheme: light;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--body);
-  font-weight: 300;
-  line-height: 1.6;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 0;
-  overflow-x: hidden;
-}
-body.locked { height: 100%; overflow: hidden; }
-section { max-width: 560px; margin: 0 auto; padding-block: 72px; text-align: center; }
-.eyebrow { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
-h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; text-wrap: balance; line-height: 1.05; }
-h2 { font-size: clamp(34px, 9vw, 46px); margin-top: 10px; }
-.diamond { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 22px auto; color: var(--gold); width: 180px; }
-.diamond::before, .diamond::after { content: ""; flex: 1; height: 1px; background: var(--gold-line); }
-.diamond i { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  
+  <title>Lakshmikrishna K S & Abhiram P Kumar | Wedding Invitation</title>
+  <meta name="description" content="Wedding of Lakshmikrishna K S & Abhiram P Kumar · Sunday, 20 December 2026 · Muhurtham: 11:55 AM–12:30 PM · SNM Auditorium, Moothakunnam.">
+  
+  <!-- ==========================================================================
+       SOCIAL SHARING / WHATSAPP OPEN GRAPH TAGS
+       Replace https://lakshmikrishna-abhiram.pages.dev with your live domain
+       ========================================================================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lakshmikrishna-abhiram.pages.dev/">
+  <meta property="og:site_name" content="Wedding Invitation">
+  <meta property="og:title" content="Lakshmikrishna K S & Abhiram P Kumar — Wedding Invitation">
+  <meta property="og:description" content="Sunday, 20 December 2026 · Muhurtham: 11:55 AM–12:30 PM · SNM Auditorium, Moothakunnam">
+  <meta property="og:image" content="https://lakshmikrishna-abhiram.pages.dev/og-preview.jpg?v=3">
+  <meta property="og:image:secure_url" content="https://lakshmikrishna-abhiram.pages.dev/og-preview.jpg?v=3">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wedding Invitation of Lakshmikrishna K S and Abhiram P Kumar on Sunday, 20 December 2026 at SNM Auditorium, Moothakunnam">
+  <meta name="twitter:card" content="summary_large_image">
 
-/* Gate */
-.gate {
-  position: fixed; inset: 0; z-index: 50; background: var(--night); color: var(--night-ink);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
-  padding: calc(24px + env(safe-area-inset-top, 0px)) 24px calc(24px + env(safe-area-inset-bottom, 0px));
-  text-align: center; transition: transform 1.1s cubic-bezier(.7,0,.2,1), opacity .6s ease .6s;
-}
-.gate.open { transform: translateY(-100%); opacity: 0; pointer-events: none; }
-.gate .mono { font-family: var(--display); font-size: 64px; font-style: italic; line-height: 1; color: var(--gold-line); }
-.gate .names { font-family: var(--display); font-size: clamp(30px, 8.5vw, 40px); line-height: 1.1; }
-.gate .names span { display: block; font-style: italic; font-size: .55em; color: var(--gold-line); margin-block: 4px; }
-.gate small { letter-spacing: .24em; text-transform: uppercase; font-size: 11px; opacity: .75; }
-.seal {
-  margin-top: 8px; border: 1px solid var(--gold-line); background: transparent; color: var(--night-ink);
-  font: 500 12px var(--body); letter-spacing: .26em; text-transform: uppercase; padding: 16px 30px; cursor: pointer;
-}
-.seal:hover { background: var(--gold-line); color: var(--night); }
-.seal:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Jost:wght@400;500&display=swap">
 
-/* Hero */
-.hero { min-height: 560px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding-top: calc(72px + env(safe-area-inset-top, 0px)); }
-.shloka { font-size: 17px; color: var(--ink-soft); }
-.hero h1 { font-size: clamp(46px, 14vw, 78px); font-style: italic; font-weight: 400; }
-.hero h1 em { display: block; font-size: .42em; font-style: normal; letter-spacing: .3em; text-transform: uppercase; font-family: var(--body); font-weight: 400; color: var(--gold); margin-block: 14px; }
-.date-big { font-family: var(--display); font-size: 28px; letter-spacing: .12em; }
-.scroll-cue { margin-top: 18px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
-.scroll-cue::after { content: ""; display: block; width: 1px; height: 40px; background: var(--gold-line); margin: 10px auto 0; animation: drip 2.2s ease-in-out infinite; transform-origin: top; }
-@keyframes drip { 0%,100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+  <style>
+    :root {
+      --paper: #f6efe4;
+      --paper-deep: #ede1ce;
+      --ink: #382418;
+      --ink-soft: #654b3a;
+      --gold: #9a681e;
+      --gold-bright: #d4a359;
+      --gold-line: #cbb082;
+      --crimson: #6e2620;
+      --night: #241711;
+      --night-ink: #f6efe4;
+      --display: "Cormorant Garamond", Georgia, serif;
+      --body: "Jost", system-ui, -apple-system, sans-serif;
+      color-scheme: light;
+    }
 
-/* Countdown */
-.count { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 26px; }
-.count div { border: 1px solid var(--gold-line); padding: 18px 4px 12px; background: var(--paper-deep); }
-.count b { display: block; font-family: var(--display); font-size: clamp(32px, 9vw, 44px); font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1; }
-.count span { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
-.when { margin-top: 22px; font-size: 15px; color: var(--ink-soft); }
+    * { box-sizing: border-box; }
+    
+    /* Snapped scrolling optimized for mobile screens */
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
 
-/* Invitation card */
-.card { background: var(--paper-deep); border: 1px solid var(--gold-line); padding: 44px 22px; outline: 1px solid var(--gold-line); outline-offset: -9px; }
-.card .small { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
-.card .nm { font-family: var(--display); font-size: clamp(38px, 11vw, 54px); line-height: 1.05; margin-block: 10px; }
-.card .and { font-family: var(--display); font-style: italic; color: var(--gold); font-size: 24px; }
-.card .when-big { font-family: var(--display); font-size: 30px; font-weight: 600; margin-top: 8px; }
-.card .place { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; margin-top: 6px; }
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(212, 163, 89, 0.14), transparent 55%),
+        radial-gradient(circle at 50% 65%, rgba(166, 115, 38, 0.08), transparent 60%);
+      color: var(--ink);
+      font-family: var(--body);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      padding-left: max(18px, env(safe-area-inset-left, 0px));
+      padding-right: max(18px, env(safe-area-inset-right, 0px));
+      overflow-x: hidden;
+      position: relative;
+    }
 
-/* Couple */
-.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
-.pair > div { min-width: 0; }
-.portrait { width: min(140px, 100%); aspect-ratio: 1; margin: 0 auto 14px; border-radius: 50%; border: 1px solid var(--gold-line); outline: 1px solid var(--gold-line); outline-offset: 6px; display: grid; place-items: center; font-family: var(--display); font-style: italic; font-size: 64px; color: var(--gold); background: var(--paper-deep); }
-.pair h3 { font-size: clamp(24px, 7vw, 32px); }
-.pair p { margin: 6px 0 0; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
+    /* Kasavu-inspired vertical borders */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      top: 0; bottom: 0;
+      width: 6px;
+      background: linear-gradient(90deg, var(--gold-line) 0%, transparent 40%, var(--crimson) 80%, var(--gold) 100%);
+      opacity: 0.38;
+      z-index: 30;
+      pointer-events: none;
+    }
+    body::before { left: 4px; }
+    body::after { right: 4px; transform: scaleX(-1); }
 
-/* Details */
-.detail { margin-top: 28px; display: grid; gap: 22px; }
-.detail dt { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
-.detail dd { margin: 4px 0 0; font-family: var(--display); font-size: 27px; line-height: 1.2; }
-.btn { display: inline-block; margin-top: 28px; padding: 15px 28px; background: var(--ink); color: var(--paper); text-decoration: none; font: 500 12px var(--body); letter-spacing: .24em; text-transform: uppercase; border: 0; cursor: pointer; }
-.btn:hover { background: var(--gold); }
+    body.locked { height: 100dvh; overflow: hidden; }
 
-/* RSVP */
-form { margin-top: 26px; display: grid; gap: 16px; text-align: left; }
-label { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); display: grid; gap: 6px; }
-input, textarea, select { font: 400 16px var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--gold-line); padding: 12px 14px; width: 100%; border-radius: 0; }
-textarea { min-height: 84px; resize: vertical; }
-.choice { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.choice label { text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--ink); display: flex; align-items: center; gap: 10px; border: 1px solid var(--gold-line); padding: 12px; cursor: pointer; }
-.choice input { width: auto; accent-color: var(--gold); }
-.note { font-size: 13px; color: var(--ink-soft); text-align: center; margin: 4px 0 0; }
+    /* Visible keyboard focus indicators across all interactive elements */
+    :focus-visible {
+      outline: 2px solid var(--crimson);
+      outline-offset: 3px;
+    }
+    .gate :focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 4px;
+    }
 
-/* Footer */
-footer { background: var(--night); color: var(--night-ink); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 64px 16px calc(48px + env(safe-area-inset-bottom, 0px)); text-align: center; }
-footer h2 { font-style: italic; font-weight: 400; }
-footer p { margin: 10px 0 0; letter-spacing: .24em; text-transform: uppercase; font-size: 12px; color: var(--gold-line); }
+    /* Snapped full-viewport sections */
+    .snap-section {
+      max-width: 560px;
+      margin: 0 auto;
+      min-height: 100dvh;
+      padding-block: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+      position: relative;
+    }
 
-#petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 20; }
-.rise { transition: transform .9s ease, opacity .9s ease; }
-.rise.pre { transform: translateY(18px); opacity: .01; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; } .gate { transition: none; } .scroll-cue::after { animation: none; } .rise { transition: none; } .rise.pre { transform: none; opacity: 1; }
-}
-</style>
+    /* Decorative uppercase reserved strictly for short eyebrow labels */
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 600;
+      margin: 0;
+      text-wrap: balance;
+      line-height: 1.12;
+      color: var(--ink);
+    }
+    h2 { font-size: clamp(30px, 7.5vw, 42px); margin-top: 6px; }
+
+    /* Lotus Divider */
+    .ornament {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      margin: 16px auto; width: min(210px, 75%); color: var(--gold);
+    }
+    .ornament::before, .ornament::after {
+      content: ""; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+    }
+    .ornament svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+
+    /* ==========================================================================
+       GATE OVERLAY (Hidden by default if JS fails; enabled via JS on 1st visit)
+       ========================================================================== */
+    .gate {
+      display: none;
+      position: fixed; inset: 0; z-index: 50;
+      background: radial-gradient(circle at 50% 45%, #382319 0%, var(--night) 80%);
+      color: var(--night-ink);
+      flex-direction: column; align-items: center; justify-content: center;
+      padding: 20px; text-align: center;
+      transition: transform 0.95s cubic-bezier(.7,0,.2,1), opacity 0.6s ease 0.3s;
+    }
+    .gate.active { display: flex; }
+    .gate.open { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+    
+    .gate-frame {
+      border: 1px solid rgba(203, 176, 130, 0.4);
+      outline: 1px solid rgba(203, 176, 130, 0.18);
+      outline-offset: -8px;
+      padding: clamp(32px, 7vw, 56px) clamp(20px, 5vw, 44px);
+      max-width: 440px; width: 100%;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .gate .mono {
+      width: 76px; height: 76px; margin: 0 auto 16px;
+      border-radius: 50%; border: 1px solid var(--gold-bright);
+      display: grid; place-items: center;
+      font-family: var(--display); font-size: 30px; font-style: italic;
+      color: var(--gold-bright);
+      box-shadow: 0 0 24px rgba(212, 163, 89, 0.15);
+    }
+    .gate .gate-title {
+      font-family: var(--display);
+      font-size: clamp(26px, 7vw, 36px);
+      line-height: 1.2;
+    }
+    .gate .gate-title span {
+      display: block; font-style: italic; font-size: 0.6em;
+      color: var(--gold-bright); margin-block: 4px;
+    }
+    .gate .gate-date {
+      margin-top: 12px; font-size: 14px; letter-spacing: 0.08em; color: var(--gold-line);
+    }
+    .seal {
+      margin-top: 24px; border: 1px solid var(--gold-bright);
+      background: rgba(212, 163, 89, 0.14); color: var(--night-ink);
+      font: 500 13px var(--body); letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 14px 28px; cursor: pointer; transition: background 0.25s ease, color 0.25s ease;
+    }
+    .seal:hover { background: var(--gold-bright); color: var(--night); }
+
+    /* ==========================================================================
+       SCREEN 1: COMBINED HERO & INVITATION CARD + COMPACT COUNTDOWN
+       ========================================================================== */
+    .invite-card {
+      width: 100%;
+      background: linear-gradient(180deg, rgba(237, 225, 206, 0.7) 0%, rgba(246, 239, 228, 0.85) 100%);
+      border: 1px solid var(--gold-line);
+      outline: 1px solid rgba(203, 176, 130, 0.55);
+      outline-offset: -8px;
+      border-radius: 180px 180px 12px 12px;
+      padding: clamp(34px, 7vw, 52px) clamp(16px, 4.5vw, 36px) 30px;
+      box-shadow: 0 16px 36px -18px rgba(56, 36, 24, 0.14);
+    }
+    .shloka { font-size: 15px; color: var(--crimson); margin-bottom: 6px; }
+    .invite-prelude { font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; }
+
+    /* Sized carefully so "Lakshmikrishna K S" never clips on 320px-375px screens */
+    .couple-names {
+      font-size: clamp(30px, 7.8vw, 50px);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ink);
+      word-break: keep-all;
+    }
+    .couple-names .amp {
+      display: block;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.58em;
+      color: var(--gold);
+      margin-block: 4px;
+    }
+
+    /* Essential details block */
+    .essentials {
+      margin-top: 6px;
+      display: grid;
+      gap: 6px;
+    }
+    .essentials .date-line {
+      font-family: var(--display);
+      font-size: clamp(22px, 5.8vw, 28px);
+      font-weight: 600;
+      color: var(--crimson);
+    }
+    .essentials .time-line {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .essentials .venue-line {
+      font-size: 15px;
+      color: var(--ink-soft);
+    }
+
+    /* Compact inline countdown pill */
+    .countdown-compact {
+      margin: 18px auto 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 3vw, 18px);
+      padding: 8px 18px;
+      background: var(--paper);
+      border: 1px solid var(--gold-line);
+      border-radius: 999px;
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-compact .cd-item {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+    }
+    .countdown-compact b {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .countdown-compact span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+    .countdown-status {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--crimson);
+    }
+
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font: 500 13px var(--body);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .btn:hover { background: var(--crimson); border-color: var(--crimson); color: #fff; }
+    .btn.outline { background: transparent; color: var(--ink); border-color: var(--gold); }
+    .btn.outline:hover { background: var(--paper-deep); }
+    .btn svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    .scroll-cue {
+      margin-top: 18px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .scroll-cue::after {
+      content: ""; display: block; width: 1px; height: 26px;
+      background: var(--gold);
+      animation: drip 2.2s ease-in-out infinite; transform-origin: top;
+    }
+    @keyframes drip { 0%,100% { transform: scaleY(.3); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
+
+    /* ==========================================================================
+       SCREEN 2: PERSONAL WELCOME & COUPLE PORTRAITS + CEREMONY & SADHYA TIMINGS
+       ========================================================================== */
+    .welcome-note {
+      max-width: 460px;
+      margin: 8px auto 0;
+      font-size: 16px;
+      color: var(--ink-soft);
+    }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      width: 100%;
+      margin-top: 22px;
+    }
+    .portrait-card {
+      background: rgba(237, 225, 206, 0.45);
+      border: 1px solid var(--gold-line);
+      padding: 18px 12px 16px;
+    }
+    /* Graceful monogram fallback if image fails or is slow */
+    .portrait-wrap {
+      width: min(124px, 34vw);
+      aspect-ratio: 1;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      outline: 1px dashed var(--gold-line);
+      outline-offset: 5px;
+      overflow: hidden;
+      background: var(--paper-deep);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    .portrait-fallback {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 42px;
+      color: var(--gold);
+      user-select: none;
+    }
+    .portrait-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portrait-Wrap-broken img { display: none; }
+    .portrait-card h3 { font-size: clamp(20px, 5.2vw, 25px); }
+    .portrait-card p {
+      margin: 3px 0 0;
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    /* Schedule / Timings Cards */
+    .schedule {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    @media (max-width: 440px) {
+      .schedule { grid-template-columns: 1fr; gap: 10px; }
+    }
+    .sched-box {
+      background: var(--paper-deep);
+      border: 1px solid var(--gold-line);
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .sched-box .time-main {
+      font-family: var(--display);
+      font-size: clamp(22px, 5.5vw, 26px);
+      font-weight: 600;
+      color: var(--crimson);
+      margin-top: 4px;
+    }
+    .sched-box p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: VENUE, MAP PREVIEW & CALENDAR ACTIONS
+       ========================================================================== */
+    .venue-card {
+      width: 100%;
+      background: var(--paper-deep);
+      border: 1px solid var(--gold-line);
+      padding: 24px 18px;
+      margin-top: 12px;
+    }
+    .venue-name {
+      font-family: var(--display);
+      font-size: clamp(26px, 6.5vw, 32px);
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .venue-address {
+      font-style: normal;
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    .map-frame-wrap {
+      margin-top: 16px;
+      border: 1px solid var(--gold-line);
+      background: var(--paper);
+      overflow: hidden;
+      height: 210px;
+    }
+    .map-frame-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: sepia(18%) contrast(98%);
+    }
+    .venue-extra {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--gold-line);
+      font-size: 14px;
+      color: var(--ink-soft);
+      display: grid;
+      gap: 4px;
+    }
+
+    /* ==========================================================================
+       SCREEN 4: RSVP & CLOSING BLESSING
+       ========================================================================== */
+    form {
+      width: 100%;
+      margin-top: 14px;
+      display: grid;
+      gap: 14px;
+      text-align: left;
+      background: rgba(237, 225, 206, 0.5);
+      padding: 22px 18px;
+      border: 1px solid var(--gold-line);
+    }
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+    legend, .field-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+      display: block;
+    }
+    input[type="text"], textarea, select {
+      font: 400 16px var(--body);
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--gold-line);
+      padding: 11px 13px;
+      width: 100%;
+      border-radius: 0;
+    }
+    textarea { min-height: 72px; resize: vertical; }
+    .choice {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 380px) {
+      .choice { grid-template-columns: 1fr; }
+    }
+    .choice label {
+      font-size: 15px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--gold-line);
+      background: var(--paper);
+      padding: 11px 12px;
+      cursor: pointer;
+    }
+    .choice input { width: 18px; height: 18px; margin: 0; accent-color: var(--crimson); }
+    
+    .helper-text {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin: 0;
+      line-height: 1.45;
+    }
+    .rsvp-status {
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--paper);
+      border-left: 3px solid var(--crimson);
+      padding: 10px 12px;
+      margin: 0;
+    }
+    .rsvp-status a { color: var(--crimson); font-weight: 500; }
+
+    /* Closing Blessing Footer */
+    footer {
+      width: 100vw;
+      background: var(--night);
+      color: var(--night-ink);
+      margin-top: 36px;
+      margin-inline: calc(-1 * max(18px, env(safe-area-inset-left, 0px)));
+      padding: 40px 20px calc(36px + env(safe-area-inset-bottom, 0px));
+      text-align: center;
+    }
+    footer .blessing {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: clamp(22px, 5.5vw, 28px);
+      color: var(--night-ink);
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    footer p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--gold-line);
+    }
+
+    #petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 20; }
+    .rise { transition: transform 0.7s ease, opacity 0.7s ease; }
+    .rise.pre { transform: translateY(16px); opacity: 0; }
+
+    /* Respect reduced-motion preferences completely */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; scroll-snap-type: none; }
+      .gate, .rise, .btn, .seal { transition: none !important; }
+      .rise.pre { transform: none !important; opacity: 1 !important; }
+      .scroll-cue::after { animation: none !important; }
+      #petals { display: none !important; }
+    }
+  </style>
+</head>
+<body>
 
 <canvas id="petals" aria-hidden="true"></canvas>
 
-<div class="gate" id="gate">
-  <div class="mono">L &amp; A</div>
-  <div class="names">Lakshmikrishna<span>and</span>Abhiram P Kumar</div>
-  <small>20 · 12 · 2026</small>
-  <button class="seal" id="openBtn" type="button">Open the Invitation</button>
+<!-- Reusable SVG Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lotus" viewBox="0 0 24 24">
+    <path d="M12 3C10.2 6.2 9 9.2 9 12c0 2.2 1.3 4.1 3 5 1.7-.9 3-2.8 3-5 0-2.8-1.2-5.8-3-9zm-4.2 3.8C5.6 8.8 4.2 11.4 4.5 14c.2 2 1.8 3.6 4.1 4.2-1.1-1.5-1.6-3.4-1.6-5.5 0-2.1.3-4.1.8-5.9zm8.4 0c.5 1.8.8 3.8.8 5.9 0 2.1-.5 4-1.6 5.5 2.3-.6 3.9-2.2 4.1-4.2.3-2.6-1.1-5.2-3.3-7.2zM3 16c1.5 2.6 4.7 4 9 4s7.5-1.4 9-4c-2.6.9-5.6 1.5-9 1.5S5.6 16.9 3 16z"/>
+  </symbol>
+  <symbol id="pin" viewBox="0 0 24 24">
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+  </symbol>
+</svg>
+
+<!-- ==========================================================================
+     CEREMONIAL GATE (First visit only; keyboard-accessible)
+     ========================================================================== -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate-frame">
+    <div class="mono" aria-hidden="true">L &amp; A</div>
+    <div class="gate-title" id="gateTitle">
+      Lakshmikrishna K S
+      <span>and</span>
+      Abhiram P Kumar
+    </div>
+    <div class="gate-date">Sunday, 20 December 2026</div>
+    <button class="seal" id="openBtn" type="button">Open Invitation</button>
+  </div>
 </div>
 
-<main>
-  <section class="hero" id="top">
-    <div class="shloka" id="shloka">ॐ श्री गणेशाय नमः</div>
-    <h1>Lakshmikrishna<em>&amp;</em>Abhiram P Kumar</h1>
-    <div class="eyebrow">Wedding Ceremony</div>
-    <div class="date-big">20 · 12 · 2026</div>
-    <a class="scroll-cue" href="#countdown">Scroll to explore</a>
-  </section>
+<main id="mainContent">
+  <!-- ==========================================================================
+       SCREEN 1: HERO + FORMAL INVITATION + ESSENTIAL DETAILS + COMPACT COUNTDOWN
+       ========================================================================== -->
+  <section class="snap-section" id="top">
+    <div class="invite-card">
+      <div class="shloka" id="shloka">ॐ श्री गणेशाय नमः</div>
+      <p class="invite-prelude">Together with their families, joyfully invite you to the wedding of</p>
+      
+      <h1 class="couple-names" id="mainTitle" tabindex="-1">
+        Lakshmikrishna K S
+        <span class="amp">&amp;</span>
+        Abhiram P Kumar
+      </h1>
 
-  <section id="countdown">
-    <div class="eyebrow">Mark your calendar</div>
-    <h2>The Big Day Approaches</h2>
-    <div class="diamond"><i></i></div>
-    <div class="count" role="timer" aria-live="off">
-      <div><b id="cd-d">00</b><span>Days</span></div>
-      <div><b id="cd-h">00</b><span>Hours</span></div>
-      <div><b id="cd-m">00</b><span>Minutes</span></div>
-      <div><b id="cd-s">00</b><span>Seconds</span></div>
-    </div>
-    <p class="when">Sunday, 20th December 2026</p>
-  </section>
+      <div class="ornament" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
 
-  <section>
-    <div class="card rise">
-      <div class="small">Together with their families</div>
-      <div class="nm">Lakshmikrishna</div>
-      <div class="and">and</div>
-      <div class="nm">Abhiram P Kumar</div>
-      <div class="diamond"><i></i></div>
-      <div class="small">Request the pleasure of your company</div>
-      <div class="when-big">20 December 2026</div>
-      <div class="place">SNM Auditorium, Moothakunnam</div>
-    </div>
-  </section>
-
-  <section>
-    <div class="eyebrow">The couple</div>
-    <h2>Bride &amp; Groom</h2>
-    <div class="diamond"><i></i></div>
-    <div class="pair">
-      <div class="rise"><div class="portrait">L</div><h3>Lakshmikrishna</h3><p>The Bride</p></div>
-      <div class="rise"><div class="portrait">A</div><h3>Abhiram P Kumar</h3><p>The Groom</p></div>
-    </div>
-  </section>
-
-  <section id="venue">
-    <div class="eyebrow">The celebration</div>
-    <h2>Join Us On Our Special Day</h2>
-    <div class="diamond"><i></i></div>
-    <dl class="detail">
-      <div><dt>Date</dt><dd>Sunday, 20th December 2026</dd></div>
-      <div><dt>Venue</dt><dd>SNM Auditorium<br>Moothakunnam</dd></div>
-    </dl>
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=SNM+Auditorium+Moothakunnam">Open Google Maps</a>
-  </section>
-
-  <section id="rsvp">
-    <div class="eyebrow">Will you join us?</div>
-    <h2>RSVP</h2>
-    <div class="diamond"><i></i></div>
-    <p>Kindly let us know if you'll be joining our celebration.</p>
-    <form id="rsvpForm">
-      <div class="choice">
-        <label for="yes"><input type="radio" name="att" id="yes" value="yes" checked> I will be there</label>
-        <label for="no"><input type="radio" name="att" id="no" value="no"> Can't attend</label>
+      <div class="essentials">
+        <div class="date-line" id="heroDate">Sunday, 20 December 2026</div>
+        <div class="time-line">Muhurtham: <span id="heroMuhurtham">11:55 AM – 12:30 PM</span></div>
+        <div class="venue-line">SNM Auditorium, Moothakunnam</div>
       </div>
-      <label for="name">Name<input id="name" required autocomplete="name"></label>
-      <label for="guests">Number of guests
-        <select id="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
-      </label>
-      <label for="msg">Message or blessings<textarea id="msg"></textarea></label>
-      <button class="btn" type="submit" style="margin-top:6px">Send RSVP on WhatsApp</button>
-      <p class="note" id="rsvpNote"></p>
-    </form>
+
+      <!-- Compact Single-Line Countdown -->
+      <div class="countdown-compact" id="countdownBox" aria-label="Countdown to Muhurtham">
+        <div class="cd-item"><b id="cd-d">--</b><span>d</span></div>
+        <div class="cd-item"><b id="cd-h">--</b><span>h</span></div>
+        <div class="cd-item"><b id="cd-m">--</b><span>m</span></div>
+        <div class="cd-item"><b id="cd-s">--</b><span>s</span></div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" id="heroMapBtn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=14275879660899577045">
+          <svg><use href="#pin"/></svg> Get Directions
+        </a>
+        <a class="btn outline" href="#rsvp">RSVP</a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#couple-timings">Ceremony &amp; Timings</a>
   </section>
 
-  <footer>
-    <div class="diamond"><i></i></div>
-    <h2>Lakshmikrishna &amp; Abhiram</h2>
-    <p>20 · December · 2026</p>
-  </footer>
+  <!-- ==========================================================================
+       SCREEN 2: COUPLE PORTRAITS + CEREMONY & SADHYA TIMINGS
+       ========================================================================== -->
+  <section class="snap-section" id="couple-timings">
+    <div class="eyebrow">With Warmth &amp; Joy</div>
+    <h2>The Couple &amp; Schedule</h2>
+    <p class="welcome-note">We look forward to celebrating this new beginning surrounded by the love and blessings of our family and friends.</p>
+
+    <div class="pair rise">
+      <div class="portrait-card">
+        <div class="portrait-wrap">
+          <span class="portrait-fallback" aria-hidden="true">L</span>
+          <img src="bride-portrait.jpg" alt="Lakshmikrishna K S" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <h3>Lakshmikrishna K S</h3>
+        <p>The Bride</p>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-wrap">
+          <span class="portrait-fallback" aria-hidden="true">A</span>
+          <img src="groom-portrait.jpg" alt="Abhiram P Kumar" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <h3>Abhiram P Kumar</h3>
+        <p>The Groom</p>
+      </div>
+    </div>
+
+    <div class="schedule rise">
+      <div class="sched-box">
+        <div class="eyebrow">Muhurtham</div>
+        <div class="time-main" id="schedMuhurtham">11:55 AM – 12:30 PM</div>
+        <p>Auspicious wedding ceremony</p>
+      </div>
+      <div class="sched-box">
+        <div class="eyebrow">Wedding Sadhya</div>
+        <div class="time-main" id="schedSadhya">12:30 PM Onwards</div>
+        <p>Traditional feast following the ceremony</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn outline" id="gcalBtn" target="_blank" rel="noopener" href="#">Add to Google Calendar</a>
+      <button class="btn outline" id="icsBtn" type="button">Apple / Outlook (.ics)</button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SCREEN 3: VENUE & DIRECTIONS
+       ========================================================================== -->
+  <section class="snap-section" id="venue">
+    <div class="eyebrow">Where We Gather</div>
+    <h2>Venue &amp; Directions</h2>
+    <div class="ornament" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+
+    <div class="venue-card rise">
+      <div class="venue-name">SNM Auditorium</div>
+      <address class="venue-address">
+        Moothakunnam, North Paravur<br>
+        Ernakulam District, Kerala 683516
+      </address>
+
+      <div class="map-frame-wrap">
+        <iframe
+          title="Map showing SNM Auditorium, Moothakunnam"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=SNM+Auditorium,Moothakunnam,Kerala+683516&output=embed">
+        </iframe>
+      </div>
+
+      <!-- Optional Parking / Family Contact (Rendered only if provided in CONFIG) -->
+      <div class="venue-extra" id="venueExtra" hidden></div>
+
+      <div class="btn-row">
+        <a class="btn" id="venueMapBtn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=14275879660899577045">
+          <svg><use href="#pin"/></svg> Open Verified Location in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SCREEN 4: RSVP & CLOSING BLESSING
+       ========================================================================== -->
+  <section class="snap-section" id="rsvp" style="justify-content: space-between; padding-bottom: 0;">
+    <div style="width: 100%; margin: auto 0;">
+      <div class="eyebrow">Kindly Respond</div>
+      <h2>RSVP on WhatsApp</h2>
+      <div class="ornament" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+
+      <form id="rsvpForm" class="rise">
+        <fieldset>
+          <legend>Will you be joining us?</legend>
+          <div class="choice">
+            <label for="attYes">
+              <input type="radio" name="att" id="attYes" value="yes" checked>
+              Joyfully attending
+            </label>
+            <label for="attNo">
+              <input type="radio" name="att" id="attNo" value="no">
+              Unable to attend
+            </label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label class="field-label" for="guestName">Your Name</label>
+          <input type="text" id="guestName" required autocomplete="name" placeholder="Enter your full name">
+        </div>
+
+        <div id="guestCountWrap">
+          <label class="field-label" for="guestCount">Total number of guests (including you)</label>
+          <select id="guestCount">
+            <option value="1">1 (Just me)</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6+ Guests</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label" for="guestMsg">Message or blessings (optional)</label>
+          <textarea id="guestMsg" placeholder="Share your wishes for the couple..."></textarea>
+        </div>
+
+        <p class="helper-text">
+          Clicking below opens WhatsApp with a prepared RSVP message. Please press <strong>Send</strong> inside WhatsApp to complete your RSVP.
+        </p>
+
+        <button class="btn" type="submit" style="width: 100%;">Continue to WhatsApp</button>
+        <p class="rsvp-status" id="rsvpNote" hidden></p>
+      </form>
+    </div>
+
+    <footer>
+      <div class="ornament" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+      <div class="blessing">Your presence and blessings are our greatest gift.</div>
+      <p>Lakshmikrishna K S &amp; Abhiram P Kumar · 20 December 2026</p>
+    </footer>
+  </section>
 </main>
 
 <script>
-/* Edit these. Leave a value empty to hide that part. */
+/* ==========================================================================
+   SINGLE SOURCE OF TRUTH CONFIGURATION
+   Update `whatsapp` with the recipient's 12-digit number (e.g., "9198470XXXXX")
+   ========================================================================== */
 var CONFIG = {
-  target: "2026-12-20T00:00:00+05:30",
-  whatsapp: "",            // e.g. "919XXXXXXXXX" (country code + number, digits only)
+  coupleTitle: "Lakshmikrishna K S & Abhiram P Kumar's Wedding",
+  startISO: "2026-12-20T11:55:00+05:30", // Muhurtham start (Asia/Kolkata)
+  endISO: "2026-12-20T12:30:00+05:30",   // Muhurtham end (Asia/Kolkata)
+  muhurthamLabel: "11:55 AM – 12:30 PM",
+  sadhyaLabel: "12:30 PM Onwards",
+  venueName: "SNM Auditorium",
+  venueAddress: "SNM Auditorium, Moothakunnam, North Paravur, Ernakulam, Kerala 683516",
+  /* Verified Google Maps Place link for SNM Auditorium, Moothakunnam */
+  googleMapsUrl: "https://www.google.com/maps/place/S.N.M+Auditorium+Moothakunnam/@10.1897797,76.2007314,17z/data=!3m1!4b1!4m6!3m5!1s0x3b0819c70f6f8965:0xc61f47c1fb436f55!8m2!3d10.1897797!4d76.2033063!16s%2Fg%2F11b6_7257_?entry=ttu",
+  whatsapp: "919000000000", // <-- Replace with your actual family/couple WhatsApp number
+  parkingInfo: "",          // Optional: e.g. "Auditorium ground parking available on-site."
+  familyContact: "",        // Optional: e.g. "For assistance: +91 98XXXXXXXX"
   shloka: "ॐ श्री गणेशाय नमः"
 };
+
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.body.classList.add("locked");
+
+  // Sync text & verified map URLs from single CONFIG
   if (!CONFIG.shloka) $("shloka").hidden = true; else $("shloka").textContent = CONFIG.shloka;
+  $("heroMuhurtham").textContent = CONFIG.muhurthamLabel;
+  $("schedMuhurtham").textContent = CONFIG.muhurthamLabel;
+  $("schedSadhya").textContent = CONFIG.sadhyaLabel;
+  $("heroMapBtn").href = CONFIG.googleMapsUrl;
+  $("venueMapBtn").href = CONFIG.googleMapsUrl;
+
+  // Render optional parking or contact info only if supplied
+  if (CONFIG.parkingInfo || CONFIG.familyContact) {
+    var extra = $("venueExtra");
+    extra.hidden = false;
+    extra.innerHTML =
+      (CONFIG.parkingInfo ? "<div><strong>Parking:</strong> " + CONFIG.parkingInfo + "</div>" : "") +
+      (CONFIG.familyContact ? "<div><strong>Contact:</strong> " + CONFIG.familyContact + "</div>" : "");
+  }
+
+  // Hide RSVP only if whatsapp is explicitly cleared
   if (!CONFIG.whatsapp) {
     $("rsvp").hidden = true;
   }
 
+  /* ==========================================================================
+     CALENDAR LINKS (Derived from CONFIG.startISO and CONFIG.endISO)
+     ========================================================================== */
+  function toUTCCompact(isoStr) {
+    return new Date(isoStr).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  }
+  var startUTC = toUTCCompact(CONFIG.startISO);
+  var endUTC = toUTCCompact(CONFIG.endISO);
+  var calDetails = "Wedding Muhurtham (" + CONFIG.muhurthamLabel + " IST) of Lakshmikrishna K S and Abhiram P Kumar, followed by Sadhya (" + CONFIG.sadhyaLabel + ").";
+
+  // 1. Google Calendar URL
+  $("gcalBtn").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(CONFIG.coupleTitle) +
+    "&dates=" + startUTC + "/" + endUTC +
+    "&ctz=Asia/Kolkata" +
+    "&details=" + encodeURIComponent(calDetails) +
+    "&location=" + encodeURIComponent(CONFIG.venueAddress);
+
+  // 2. Apple / Outlook (.ics) Generator
+  $("icsBtn").addEventListener("click", function () {
+    var stamp = toUTCCompact(new Date().toISOString());
+    var icsLines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Lakshmikrishna & Abhiram Wedding//EN",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "BEGIN:VEVENT",
+      "UID:wedding-20261220-la@moothakunnam",
+      "DTSTAMP:" + stamp,
+      "DTSTART:" + startUTC,
+      "DTEND:" + endUTC,
+      "SUMMARY:" + CONFIG.coupleTitle,
+      "DESCRIPTION:" + calDetails,
+      "LOCATION:" + CONFIG.venueAddress,
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ];
+    var blob = new Blob([icsLines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    var link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "lakshmikrishna-abhiram-wedding.ics";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+
+  /* ==========================================================================
+     COMPACT COUNTDOWN (Derived from CONFIG.startISO)
+     ========================================================================== */
   function pad(n) { return String(n).padStart(2, "0"); }
-  var t = new Date(CONFIG.target).getTime();
+  var targetMs = new Date(CONFIG.startISO).getTime();
+  var endMs = new Date(CONFIG.endISO).getTime();
+
   function tick() {
-    var d = Math.max(0, t - Date.now()), s = Math.floor(d / 1000);
+    var now = Date.now();
+    if (now >= targetMs && now <= endMs) {
+      $("countdownBox").innerHTML = '<span class="countdown-status">Muhurtham is underway</span>';
+      return;
+    }
+    if (now > endMs) {
+      $("countdownBox").innerHTML = '<span class="countdown-status">Married on 20 Dec 2026</span>';
+      return;
+    }
+    var s = Math.floor((targetMs - now) / 1000);
     $("cd-d").textContent = pad(Math.floor(s / 86400));
-    $("cd-h").textContent = pad(Math.floor(s % 86400 / 3600));
-    $("cd-m").textContent = pad(Math.floor(s % 3600 / 60));
+    $("cd-h").textContent = pad(Math.floor((s % 86400) / 3600));
+    $("cd-m").textContent = pad(Math.floor((s % 3600) / 60));
     $("cd-s").textContent = pad(s % 60);
   }
-  tick(); setInterval(tick, 1000);
+  tick();
+  setInterval(tick, 1000);
 
-  // Falling petals
-  var cv = $("petals"), cx = cv.getContext("2d"), P = [], raf = 0;
+  /* ==========================================================================
+     CEREMONIAL GATE (First visit only + Keyboard Focus Trap & Restore)
+     ========================================================================== */
+  var gate = $("gate");
+  var openBtn = $("openBtn");
+  var seenKey = "la_wedding_gate_opened_v1";
+  var hasVisited = false;
+  try { hasVisited = sessionStorage.getItem(seenKey) === "1"; } catch (e) {}
+
+  // Gentle Marigold & Jasmine Petals
+  var cv = $("petals"), cx = cv.getContext("2d"), P = [], raf = 0, spawning = false;
   function size() { cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio; }
   size(); addEventListener("resize", size);
+
   function petal() {
-    var c = ["#d9892b", "#e8a73a", "#c26a1c", "#f0c05a"];
-    return { x: Math.random() * cv.width, y: -20 * devicePixelRatio, r: (5 + Math.random() * 6) * devicePixelRatio, vy: (.6 + Math.random() * 1.1) * devicePixelRatio, vx: (Math.random() - .5) * .8 * devicePixelRatio, a: Math.random() * 6, va: (Math.random() - .5) * .06, c: c[Math.floor(Math.random() * c.length)] };
+    var c = ["#d9822b", "#e8a838", "#c85a28", "#f3c663", "#fff9eb"];
+    return {
+      x: Math.random() * cv.width,
+      y: -20 * devicePixelRatio,
+      r: (6 + Math.random() * 6) * devicePixelRatio,
+      vy: (0.55 + Math.random() * 0.9) * devicePixelRatio,
+      vx: (Math.random() - 0.5) * 0.65 * devicePixelRatio,
+      a: Math.random() * 6.28,
+      va: (Math.random() - 0.5) * 0.04,
+      c: c[Math.floor(Math.random() * c.length)]
+    };
   }
   function frame() {
     cx.clearRect(0, 0, cv.width, cv.height);
     P.forEach(function (p) {
-      p.y += p.vy; p.x += p.vx + Math.sin(p.a) * .5 * devicePixelRatio; p.a += p.va;
-      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.a); cx.fillStyle = p.c; cx.globalAlpha = .85;
-      cx.beginPath(); cx.ellipse(0, 0, p.r, p.r * .5, 0, 0, 6.283); cx.fill(); cx.restore();
+      p.y += p.vy; p.x += p.vx + Math.sin(p.a) * 0.4 * devicePixelRatio; p.a += p.va;
+      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.a);
+      cx.fillStyle = p.c; cx.globalAlpha = 0.8;
+      cx.beginPath();
+      cx.moveTo(0, -p.r);
+      cx.bezierCurveTo(p.r * 0.8, -p.r * 0.4, p.r * 0.6, p.r * 0.7, 0, p.r);
+      cx.bezierCurveTo(-p.r * 0.6, p.r * 0.7, -p.r * 0.8, -p.r * 0.4, 0, -p.r);
+      cx.fill(); cx.restore();
     });
     P = P.filter(function (p) { return p.y < cv.height + 30; });
-    if (P.length || spawning) raf = requestAnimationFrame(frame); else cx.clearRect(0, 0, cv.width, cv.height);
+    if (P.length || spawning) raf = requestAnimationFrame(frame);
   }
-  var spawning = false;
   function shower() {
     if (reduce) return;
     spawning = true; var n = 0;
-    var iv = setInterval(function () { P.push(petal()); if (++n > 70) { clearInterval(iv); spawning = false; } }, 90);
+    var iv = setInterval(function () { P.push(petal()); if (++n > 50) { clearInterval(iv); spawning = false; } }, 95);
     cancelAnimationFrame(raf); frame();
   }
 
-  $("openBtn").addEventListener("click", function () {
-    $("gate").classList.add("open");
+  function unlockGate() {
+    gate.classList.add("open");
+    gate.setAttribute("aria-hidden", "true");
     document.body.classList.remove("locked");
+    try { sessionStorage.setItem(seenKey, "1"); } catch (e) {}
     window.scrollTo(0, 0);
+    $("mainTitle").focus({ preventScroll: true });
     shower();
-  });
+  }
 
-  // Gentle reveal for blocks below the fold
+  if (!hasVisited) {
+    gate.classList.add("active");
+    document.body.classList.add("locked");
+    setTimeout(function () { openBtn.focus(); }, 50);
+
+    openBtn.addEventListener("click", unlockGate);
+    gate.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        unlockGate();
+      } else if (e.key === "Tab") {
+        e.preventDefault();
+        openBtn.focus();
+      }
+    });
+  }
+
+  /* ==========================================================================
+     SCROLL REVEAL
+     ========================================================================== */
   var els = document.querySelectorAll(".rise");
   if ("IntersectionObserver" in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.remove("pre"); io.unobserve(e.target); } });
-    }, { threshold: .15 });
-    els.forEach(function (el) { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("pre"); io.observe(el); } });
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.remove("pre"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) {
+      if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("pre"); io.observe(el); }
+    });
   }
+
+  /* ==========================================================================
+     RSVP CONDITIONAL FIELDS & HONEST WHATSAPP HANDOFF
+     ========================================================================== */
+  var attYes = $("attYes");
+  var attNo = $("attNo");
+  var guestCountWrap = $("guestCountWrap");
+
+  function syncAttendanceFields() {
+    guestCountWrap.hidden = attNo.checked;
+  }
+  attYes.addEventListener("change", syncAttendanceFields);
+  attNo.addEventListener("change", syncAttendanceFields);
+  syncAttendanceFields();
 
   $("rsvpForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    var yes = $("yes").checked;
-    var text = "Lakshmikrishna & Abhiram wedding, 20 Dec 2026\n" + $("name").value + (yes ? " will attend with " + $("guests").value + " guest(s)." : " is unable to attend.") + ($("msg").value ? "\n" + $("msg").value : "");
-    var url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
-    $("rsvpNote").innerHTML = 'Your message is ready. <a href="' + url + '" target="_blank" rel="noopener">Tap here to send it on WhatsApp</a>.';
+    var attending = attYes.checked;
+    var name = $("guestName").value.trim();
+    var guests = $("guestCount").value;
+    var msg = $("guestMsg").value.trim();
+
+    var lines = [
+      "Wedding RSVP: Lakshmikrishna K S & Abhiram P Kumar (20 Dec 2026)",
+      "Name: " + name,
+      "Response: " + (attending ? "Joyfully attending (Total guests including me: " + guests + ")" : "Unable to attend")
+    ];
+    if (msg) lines.push("Message: " + msg);
+
+    var cleanPhone = CONFIG.whatsapp.replace(/\D/g, "");
+    var url = "https://wa.me/" + cleanPhone + "?text=" + encodeURIComponent(lines.join("\n"));
+    
+    window.open(url, "_blank", "noopener");
+    var note = $("rsvpNote");
+    note.hidden = false;
+    note.innerHTML = 'WhatsApp has been opened with your prepared message. <strong>Please press Send in WhatsApp</strong> to complete your RSVP. <a href="' + url + '" target="_blank" rel="noopener">Re-open WhatsApp</a>';
   });
 })();
 </script>
-
-</body></html>
+</body>
+</html>
